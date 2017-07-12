@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     private void initActionBar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        mToolbar.setNavigationIcon(R.drawable.ic_home_black_24dp);
+        mToolbar.setNavigationIcon(R.drawable.ic_return);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,12 +114,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_edit:
-                Toast.makeText(this, "action_edit", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_share:
-                Toast.makeText(this, "action_share", Toast.LENGTH_SHORT).show();
-                break;
+//            case R.id.action_edit:
+//                Toast.makeText(this, "action_edit", Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.action_share:
+//                Toast.makeText(this, "action_share", Toast.LENGTH_SHORT).show();
+//                break;
         }
         return super.onOptionsItemSelected(item);
     }
