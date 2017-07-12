@@ -18,7 +18,7 @@
         app:showAsAction="ifRoom" />-->
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_adding"
         android:orderInCategory="100"
         android:icon="@drawable/ic_add"
         android:title="@string/app_name"

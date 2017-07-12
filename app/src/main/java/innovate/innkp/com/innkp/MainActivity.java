@@ -3,7 +3,10 @@ package innovate.innkp.com.innkp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +15,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import innovate.innkp.com.innkp.Utils.BottomNavigationViewHelper;
@@ -25,6 +30,22 @@ public class MainActivity extends AppCompatActivity {
     private SocialFragment mSocialFragment;
     private MineFragment mMineFragment;
     private Fragment mCurrentFragment;
+    private PopupWindow mAddListPopupWindow;
+    private static final int ADD_LIST_TIMEOUT_MSG = 1;
+    private boolean mCanShowAddList;
+
+    private final Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case ADD_LIST_TIMEOUT_MSG: {
+                    mHandler.removeMessages(ADD_LIST_TIMEOUT_MSG);
+                    mCanShowAddList = true;
+                    break;
+                }
+            }
+        }
+    };
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -82,6 +103,27 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         initActionBar();
         initFragment();
+        initViews();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mCanShowAddList = true;
+    }
+
+    public void initViews() {
+        View view = getLayoutInflater().inflate(R.layout.course_page, null);
+        mAddListPopupWindow = new PopupWindow(view, 380, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mAddListPopupWindow.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.WHITE));
+        mAddListPopupWindow.setOutsideTouchable(true);
+        mAddListPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                mCanShowAddList = false;
+                mHandler.sendEmptyMessageDelayed(ADD_LIST_TIMEOUT_MSG, 200);
+            }
+        });
     }
 
     private void initActionBar() {
@@ -114,12 +156,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-//            case R.id.action_edit:
-//                Toast.makeText(this, "action_edit", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.action_share:
-//                Toast.makeText(this, "action_share", Toast.LENGTH_SHORT).show();
-//                break;
+            case R.id.action_adding:
+                if (mAddListPopupWindow != null && mCanShowAddList) {
+                    if (!mAddListPopupWindow.isShowing()) {
+                        mAddListPopupWindow.showAsDropDown(findViewById(R.id.action_adding));
+                    }
+                }
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
