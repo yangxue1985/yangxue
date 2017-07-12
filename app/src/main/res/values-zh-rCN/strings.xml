@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Innkp</string>
-    <string name="title_home">主页</string>
-    <string name="title_course">课程</string>
-    <string name="title_social">圈子</string>
+    <string name="title_home">听说</string>
+    <string name="title_course">训练营</string>
+    <string name="title_social">宝藏</string>
     <string name="title_mine">我</string>
 </resources>
