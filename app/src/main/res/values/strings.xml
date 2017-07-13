@@ -7,4 +7,6 @@
     <string name="add_patent">Add patent</string>
     <string name="refreshing">Loading&#8230;</string>
     <string name="click_load_more">More...</string>
+    <string name="resource_title">Title</string>
+    <string name="resource_summery">Summery</string>
 </resources>

@@ -61,16 +61,18 @@ public class PagingListView extends ListView implements OnScrollListener {
                 addFooterView();
         } else {
             if (getFooterViewsCount() == 1 && mFooterRootView != null)
-                if (this.getAdapter() instanceof HeaderViewListAdapter) {
+//                if (this.getAdapter() instanceof FooterViewListAdapter) {
                     this.removeFooterView(mFooterRootView);
-                }
+//                }
         }
     }
 
     public void setFooterRootViewVisibility(int visibility) {
         mFooterRootView.setVisibility(visibility);
     }
-
+    public void setHeaderRootViewVisibility(int visibility) {
+        mHeaderRootView.setVisibility(visibility);
+    }
     public void setHeaderCanLoadMore(boolean canHeaderLoadMore) {
         mHeaderCanLoadMore = canHeaderLoadMore;
         if (mHeaderCanLoadMore) {

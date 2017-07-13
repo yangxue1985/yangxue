@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddPatentActivity" />
+        <activity android:name=".PatentCourseActivity" />
     </application>
 
 </manifest>
