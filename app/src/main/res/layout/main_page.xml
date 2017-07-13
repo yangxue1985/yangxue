@@ -7,9 +7,14 @@
     android:orientation="vertical"
     tools:context="innovate.innkp.com.innkp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <innovate.innkp.com.innkp.UI.PagingListView
+        android:id="@+id/resource_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_home" />
+        android:dividerHeight="3dp"
+        android:divider="@color/black_9"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="12dp" />
 
 </LinearLayout>
