@@ -9,8 +9,8 @@
     tools:context="innovate.innkp.com.innkp.MainActivity">
 
     <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+        android:id="@+id/toolbar_main"
+        layout="@layout/toolbar_main" />
     <FrameLayout
         android:id="@+id/fragment_view"
         android:layout_width="match_parent"

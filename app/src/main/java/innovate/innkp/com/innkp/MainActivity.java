@@ -3,6 +3,7 @@ package innovate.innkp.com.innkp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -113,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initViews() {
-        View view = getLayoutInflater().inflate(R.layout.course_page, null);
-        mAddListPopupWindow = new PopupWindow(view, 380, ViewGroup.LayoutParams.WRAP_CONTENT);
+        View popupView = getLayoutInflater().inflate(R.layout.add_list_view, null);
+        mAddListPopupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         mAddListPopupWindow.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.WHITE));
         mAddListPopupWindow.setOutsideTouchable(true);
         mAddListPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -124,18 +125,54 @@ public class MainActivity extends AppCompatActivity {
                 mHandler.sendEmptyMessageDelayed(ADD_LIST_TIMEOUT_MSG, 200);
             }
         });
+        popupView.findViewById(R.id.add_patent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mAddListPopupWindow != null)
+                    mAddListPopupWindow.dismiss();
+                Intent intent = new Intent(MainActivity.this, AddPatentActivity.class);
+                startActivity(intent);
+            }
+        });
+        popupView.findViewById(R.id.add_patent2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mAddListPopupWindow != null)
+                    mAddListPopupWindow.dismiss();
+                Intent intent = new Intent(MainActivity.this, AddPatentActivity.class);
+                startActivity(intent);
+            }
+        });
+        popupView.findViewById(R.id.add_patent3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mAddListPopupWindow != null)
+                    mAddListPopupWindow.dismiss();
+                Intent intent = new Intent(MainActivity.this, AddPatentActivity.class);
+                startActivity(intent);
+            }
+        });
+        popupView.findViewById(R.id.add_patent4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mAddListPopupWindow != null)
+                    mAddListPopupWindow.dismiss();
+                Intent intent = new Intent(MainActivity.this, AddPatentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initActionBar() {
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(mToolbar);
-        mToolbar.setNavigationIcon(R.drawable.ic_return);
+/*        mToolbar.setNavigationIcon(R.drawable.ic_return);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                finish();
             }
-        });
+        });*/
 
     }
 
