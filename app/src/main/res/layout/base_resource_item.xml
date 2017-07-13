@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="230dp"
         android:src="@drawable/sample_pic"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/resource_summery" />
 
     <TextView
         android:id="@+id/base_resource_title"

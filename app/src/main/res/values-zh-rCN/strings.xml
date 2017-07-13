@@ -7,4 +7,5 @@
     <string name="add_patent">添加专利</string>
     <string name="refreshing">加载中&#8230;</string>
     <string name="click_load_more">更多...</string>
+    <string name="patent_course">创新讲座</string>
 </resources>
