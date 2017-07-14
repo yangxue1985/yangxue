@@ -48,7 +48,7 @@ public class MainPageFragment extends Fragment {
         mPagingList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               Intent intent = new Intent(getActivity(), PatentCourseActivity.class);
+                Intent intent = new Intent(getActivity(), PatentCourseActivity.class);
                 intent.putExtra("index", i);
                 startActivity(intent);
             }

@@ -2,6 +2,7 @@
     <string name="app_name">Innkp</string>
     <string name="title_home">Home</string>
     <string name="title_course">Course</string>
+    <string name="title_training">Training</string>
     <string name="title_social">Social</string>
     <string name="title_mine">Mine</string>
     <string name="add_patent">Add patent</string>

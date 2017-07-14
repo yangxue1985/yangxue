@@ -7,9 +7,15 @@
     android:orientation="vertical"
     tools:context="innovate.innkp.com.innkp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/course_btn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_course" />
+    <Button
+        android:id="@+id/training_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_training" />
 
 </LinearLayout>

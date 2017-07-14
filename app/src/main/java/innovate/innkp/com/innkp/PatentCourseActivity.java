@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-public class PatentCourseActivity extends AppCompatActivity {
-    private static final String TAG = CourseFragment.class.getName();
+public class PatentCourseActivity extends BaseActivity {
+    private static final String TAG = PatentCourseActivity.class.getName();
     private Toolbar mToolbar;
     private TextView mTextView;
 
@@ -25,6 +25,8 @@ public class PatentCourseActivity extends AppCompatActivity {
 
     private void initActionBar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar_patent_course);
+        TextView toolbar_name=(TextView)findViewById(R.id.toolbar_name);
+        toolbar_name.setText(getString(R.string.patent_course));
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_return);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

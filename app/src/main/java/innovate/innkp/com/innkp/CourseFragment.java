@@ -1,6 +1,7 @@
 package innovate.innkp.com.innkp;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,7 +22,24 @@ public class CourseFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.course_page, container, false);
         Log.d(TAG, "CourseFragment created.");
+        initViews(view);
         return view;
     }
 
+    private void initViews(View view) {
+        view.findViewById(R.id.course_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CourseActivity.class);
+                startActivity(intent);
+            }
+        });
+        view.findViewById(R.id.training_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TrainingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }
