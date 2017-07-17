@@ -22,7 +22,7 @@ import android.widget.PopupWindow;
 
 import innovate.innkp.com.innkp.Utils.BottomNavigationViewHelper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getName();
     private Toolbar mToolbar;
     private MainPageFragment mMainPageFragment;
