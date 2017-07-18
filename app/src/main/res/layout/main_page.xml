@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="innovate.innkp.com.innkp.MainActivity">
+    tools:context="com.innovate.innkp.MainActivity">
 
-    <innovate.innkp.com.innkp.UI.PagingListView
+    <com.innovate.innkp.UI.PagingListView
         android:id="@+id/resource_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
