@@ -3,12 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.innovate.innkp.AddPatentActivity">
-
-    <include
-        android:id="@+id/toolbar_sub"
-        layout="@layout/toolbar_sub" />
+    tools:context="com.innkp.videoplayer.VideoDetailActivity">
 
     <com.innkp.videoplayer.BDVideoView
         android:id="@+id/vv"
@@ -18,9 +13,4 @@
 
     </com.innkp.videoplayer.BDVideoView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:text="下面放各种视频信息" />
 </LinearLayout>

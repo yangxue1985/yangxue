@@ -24,6 +24,7 @@
         <activity android:name=".PatentCourseActivity" />
         <activity android:name=".CourseActivity" />
         <activity android:name=".TrainingActivity" />
+        <activity android:name=".videoplayer.VideoDetailActivity" />
     </application>
 
 </manifest>
