@@ -1,4 +1,4 @@
-package com.innovate.innkp.videoplayer;
+package com.innkp.innovate.dto;
 
 import com.innkp.videoplayer.bean.IVideoInfo;
 

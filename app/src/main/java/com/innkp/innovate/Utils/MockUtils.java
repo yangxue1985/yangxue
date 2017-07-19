@@ -1,4 +1,4 @@
-package com.innovate.innkp.videoplayer;
+package com.innkp.innovate.Utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
