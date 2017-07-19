@@ -3,8 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="text_normal">#e6e6e6</color>
+    <color name="text_pressed">#999999</color>
     <color name="black_0">#000000</color>
     <color name="black_3">#333333</color>
     <color name="black_d">#dddddd</color>
     <color name="black_9">#999999</color>
+    <color name="software_textColor_selected">#FF1C94EA</color>
+    <color name="software_textColor_unselected">#FFDCE0DF</color>
 </resources>

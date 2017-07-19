@@ -2,6 +2,7 @@ package com.innkp.innovate;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ public class AddPatentActivity extends BaseActivity {
     }
 
     private void initActionBar() {
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_sub);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_add);
         TextView toolbar_name = (TextView) findViewById(R.id.toolbar_name);
         toolbar_name.setText(getString(R.string.add_patent));
         setSupportActionBar(mToolbar);
@@ -29,6 +30,12 @@ public class AddPatentActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        findViewById(R.id.text_release_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG,"1111");
             }
         });
     }
