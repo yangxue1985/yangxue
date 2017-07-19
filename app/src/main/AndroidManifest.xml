@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.innovate.innkp">
+    package="com.innkp.innovate">
 
     <application
         android:allowBackup="true"
@@ -22,9 +22,11 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".AddPatentActivity" />
         <activity android:name=".PatentCourseActivity" />
-        <activity android:name=".CourseActivity" />
+        <activity
+            android:name=".CourseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
         <activity android:name=".TrainingActivity" />
-        <activity android:name=".videoplayer.VideoDetailActivity" />
     </application>
 
 </manifest>

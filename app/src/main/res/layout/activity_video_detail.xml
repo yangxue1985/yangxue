@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.innovate.innkp.videoplayer.VideoDetailActivity">
+    tools:context="com.innkp.innovate.CourseActivity">
 
     <com.innkp.videoplayer.BDVideoView
         android:id="@+id/vv"
