@@ -9,6 +9,7 @@
     <color name="black_3">#333333</color>
     <color name="black_d">#dddddd</color>
     <color name="black_9">#999999</color>
+    <color name="black_a">#AAAAAA</color>
     <color name="software_textColor_selected">#FF1C94EA</color>
     <color name="software_textColor_unselected">#FFDCE0DF</color>
 </resources>

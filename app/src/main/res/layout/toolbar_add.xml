@@ -26,7 +26,6 @@
             android:layout_marginRight="20dp"
             android:gravity="center_vertical"
             android:text="@string/add_text_done"
-            android:color="@drawable/text_color"
             android:textSize="18sp" />
     </RelativeLayout>
 </android.support.v7.widget.Toolbar>

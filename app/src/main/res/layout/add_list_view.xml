@@ -20,11 +20,11 @@
             android:background="@color/black_3" />
 
         <TextView
-            android:id="@+id/add_patent"
+            android:id="@+id/add_innovate"
             style="@style/AddListStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_patent" />
+            android:text="@string/add_innovate" />
 
         <TextView
             android:layout_width="match_parent"
@@ -32,11 +32,11 @@
             android:background="@color/black_3" />
 
         <TextView
-            android:id="@+id/add_patent2"
+            android:id="@+id/add_complaints"
             style="@style/AddListStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_patent" />
+            android:text="@string/add_complaints" />
 
         <TextView
             android:layout_width="match_parent"
@@ -44,27 +44,16 @@
             android:background="@color/black_3" />
 
         <TextView
-            android:id="@+id/add_patent3"
+            android:id="@+id/add_feeling"
             style="@style/AddListStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_patent" />
+            android:text="@string/add_feeling" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black_3" />
 
-        <TextView
-            android:id="@+id/add_patent4"
-            style="@style/AddListStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_patent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black_3" />
     </LinearLayout>
 </LinearLayout>

@@ -5,7 +5,9 @@
     <string name="title_training">Training</string>
     <string name="title_social">Social</string>
     <string name="title_mine">Mine</string>
-    <string name="add_patent">Add patent</string>
+    <string name="add_innovate">Add Innovate</string>
+    <string name="add_complaints">Add Complaints</string>
+    <string name="add_feeling">Add Feeling</string>
     <string name="refreshing">Loading&#8230;</string>
     <string name="click_load_more">More...</string>
     <string name="resource_pic">Picture</string>
@@ -13,4 +15,6 @@
     <string name="resource_summery">Summery</string>
     <string name="patent_course">Patent Course</string>
     <string name="add_text_done">Done</string>
+    <string name="add_idea_title">title</string>
+    <string name="add_idea_text">Something to write...</string>
 </resources>

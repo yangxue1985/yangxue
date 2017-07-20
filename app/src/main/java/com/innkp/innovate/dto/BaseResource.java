@@ -1,6 +1,6 @@
 package com.innkp.innovate.dto;
 
-public class BaseResource  {
+public class BaseResource extends BaseDto {
     public int id;
     public String title;
     public String text;

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.innkp.innovate">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +22,7 @@
         </activity>
         <activity android:name=".BaseActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".AddPatentActivity" />
+        <activity android:name=".UserIdeaAddActivity" />
         <activity android:name=".PatentCourseActivity" />
         <activity
             android:name=".CourseActivity"

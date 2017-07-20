@@ -5,9 +5,13 @@
     <string name="title_training">训练营</string>
     <string name="title_social">宝藏</string>
     <string name="title_mine">我</string>
-    <string name="add_patent">添加专利</string>
+    <string name="add_innovate">我有创意</string>
+    <string name="add_complaints">我要吐槽</string>
+    <string name="add_feeling">我的感悟</string>
     <string name="refreshing">加载中&#8230;</string>
     <string name="click_load_more">更多...</string>
     <string name="patent_course">创新讲座</string>
     <string name="add_text_done">提交</string>
+    <string name="add_idea_title">标题</string>
+    <string name="add_idea_text">想说点什么...</string>
 </resources>
