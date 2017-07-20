@@ -42,7 +42,7 @@
                 android:gravity="top"
                 android:hint="@string/add_idea_text"
                 android:inputType="textMultiLine"
-                android:minLines="10"
+                android:minLines="6"
                 android:padding="5dp"
                 android:scrollbars="vertical" />
 

@@ -11,8 +11,8 @@
         android:id="@+id/resource_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/black_9"
-        android:dividerHeight="1dp" />
+        android:divider="@color/black_e"
+        android:dividerHeight="5dp" />
 
 
 </LinearLayout>

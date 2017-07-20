@@ -12,6 +12,8 @@
     <string name="click_load_more">More...</string>
     <string name="resource_pic">Picture</string>
     <string name="resource_title">Title</string>
+    <string name="resource_played">1w times played</string>
+    <string name="resource_name">Name</string>
     <string name="resource_summery">Summery</string>
     <string name="patent_course">Patent Course</string>
     <string name="add_text_done">Done</string>

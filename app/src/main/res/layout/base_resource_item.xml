@@ -2,26 +2,124 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="5dp">
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/base_resource_pic"
-        android:layout_width="wrap_content"
-        android:layout_height="230dp"
-        android:src="@drawable/sample_pic"
-        android:scaleType="fitCenter"
-        android:contentDescription="@string/resource_summery" />
-
-    <TextView
-        android:id="@+id/base_resource_title"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/resource_title" />
+        android:layout_height="200dp">
 
-    <TextView
-        android:id="@+id/base_resource_text"
+        <ImageView
+            android:id="@+id/resource_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/resource_summery"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_pic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resource_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/resource_title"
+                android:textColor="@color/black_f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/resource_played"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="@string/resource_played"
+                android:textColor="@color/black_f"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/resource_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/ic_play" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/resource_preview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/resource_summery" />
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/resource_author_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/resource_author_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/resource_author_icon"
+            android:text="@string/resource_name" />
+
+        <ImageView
+            android:id="@+id/resource_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_share"
+            android:text="@string/resource_summery" />
+
+        <TextView
+            android:id="@+id/resource_praised_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/resource_share"
+            android:text="100"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/resource_praised"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/resource_praised_count"
+            android:padding="5dp"
+            android:src="@drawable/praise_normal" />
+
+        <TextView
+            android:id="@+id/resource_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/resource_praised"
+            android:text="100"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/resource_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/resource_message_count"
+            android:padding="5dp"
+            android:src="@drawable/interactive_normal" />
+    </RelativeLayout>
 </LinearLayout>

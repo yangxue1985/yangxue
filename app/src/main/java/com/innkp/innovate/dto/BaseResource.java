@@ -1,8 +1,10 @@
 package com.innkp.innovate.dto;
 
 public class BaseResource extends BaseDto {
-    public int id;
     public String title;
-    public String text;
-    public String pic_path;
+    public String played;
+    public String user_icon_path;
+    public String author;
+    public int praised;
+    public int message;
 }

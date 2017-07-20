@@ -46,13 +46,13 @@ public class MainPageFragment extends Fragment {
         mPagingList.setHeaderRootViewVisibility(View.GONE);
         mBaseResourceAdapter = new BaseResourceAdapter();
         mPagingList.setAdapter(mBaseResourceAdapter);
-        mPagingList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                VideoDetailInfo info = MockUtils.mockData(VideoDetailInfo.class);
-                CourseActivity.start(getActivity(), info);
-            }
-        });
+//        mPagingList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                VideoDetailInfo info = MockUtils.mockData(VideoDetailInfo.class);
+//                CourseActivity.start(getActivity(), info);
+//            }
+//        });
         mPagingList.setOnLoadListener(new PagingListView.OnLoadMoreListener() {
             @Override
             public void onFooterLoadMore() {
@@ -98,25 +98,68 @@ public class MainPageFragment extends Fragment {
                 holder = new ViewHolder();
                 LayoutInflater inflater = LayoutInflater.from(getContext());
                 convertView = inflater.inflate(R.layout.base_resource_item, parent, false);
-                holder.title = (TextView) convertView.findViewById(R.id.base_resource_title);
-                holder.text = (TextView) convertView.findViewById(R.id.base_resource_text);
-                holder.thumb_view = (ImageView) convertView.findViewById(R.id.base_resource_pic);
+                holder.preview = convertView.findViewById(R.id.resource_preview);
+                holder.picture = (ImageView) convertView.findViewById(R.id.resource_pic);
+                holder.title = (TextView) convertView.findViewById(R.id.resource_title);
+                holder.played = (TextView) convertView.findViewById(R.id.resource_played);
+                holder.play = (ImageView) convertView.findViewById(R.id.resource_play);
+                holder.author_icon = (ImageView) convertView.findViewById(R.id.resource_author_icon);
+                holder.author = (TextView) convertView.findViewById(R.id.resource_author_name);
+                holder.share = (ImageView) convertView.findViewById(R.id.resource_share);
+                holder.praised_count = (TextView) convertView.findViewById(R.id.resource_praised_count);
+                holder.message_count = (TextView) convertView.findViewById(R.id.resource_message_count);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
-//            final BaseResource base = mList.get(position);
-//            if (base != null) {
-//                holder.title.setText(getContext().getResources().getString(R.string.app_name));
-//            }
+            final BaseResource base = mList.get(position);
+            if (base != null) {
+//                holder.title.setText(base.title);
+//                holder.played.setText(base.played + "");
+//                holder.author.setText(base.author);
+//                holder.praised_count.setText(base.praised + "");
+//                holder.message_count.setText(base.message + "");
+                holder.preview.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        VideoDetailInfo info = MockUtils.mockData(VideoDetailInfo.class);
+                        CourseActivity.start(getActivity(), info);
+                    }
+                });
+                holder.play.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        VideoDetailInfo info = MockUtils.mockData(VideoDetailInfo.class);
+                        CourseActivity.start(getActivity(), info);
+                    }
+                });
+                holder.author_icon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    }
+                });
+                holder.share.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    }
+                });
+
+            }
             return convertView;
         }
 
 
         private class ViewHolder {
+            private View preview;
+            private ImageView picture;
             private TextView title;
-            private TextView text;
-            private ImageView thumb_view;
+            private TextView played;
+            private ImageView play;
+            private ImageView author_icon;
+            private TextView author;
+            private ImageView share;
+            private TextView praised_count;
+            private TextView message_count;
         }
     }
 }
