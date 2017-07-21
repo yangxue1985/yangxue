@@ -24,8 +24,10 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
+            android:enabled="false"
             android:gravity="center_vertical"
             android:text="@string/add_text_done"
+            android:textColor="@color/black_9"
             android:textSize="18sp" />
     </RelativeLayout>
 </android.support.v7.widget.Toolbar>

@@ -20,4 +20,9 @@
     <string name="add_idea_title">title</string>
     <string name="add_idea_text">Something to write...</string>
     <string name="share_to">Share this to</string>
+    <string name="quit_alert">Are you sure to quit?</string>
+    <string name="alert_quit">OK</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="release_submit">OK to submit?</string>
+
 </resources>

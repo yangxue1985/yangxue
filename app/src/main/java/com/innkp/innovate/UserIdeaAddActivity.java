@@ -3,16 +3,20 @@ package com.innkp.innovate;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.innkp.innovate.UI.AlertDialog;
 import com.innkp.innovate.dto.ImageDto;
 
 import java.util.ArrayList;
@@ -28,6 +32,9 @@ public class UserIdeaAddActivity extends BaseActivity {
     public final static String IDEA = "idea";
     private GridView mPictureGridView;
     private ImageAdapter mImageAdapter;
+    private EditText mAddIdeaTitle;
+    private EditText mAddIdea;
+    private TextView mReleaseBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +53,40 @@ public class UserIdeaAddActivity extends BaseActivity {
         mPictureGridView = (GridView) findViewById(R.id.add_idea_picture);
         mImageAdapter = new ImageAdapter();
         mPictureGridView.setAdapter(mImageAdapter);
+        mAddIdeaTitle = (EditText) findViewById(R.id.add_idea_title);
+        mAddIdeaTitle.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                ismHasContent();
+            }
+        });
+        mAddIdea = (EditText) findViewById(R.id.add_idea);
+        mAddIdea.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                ismHasContent();
+            }
+        });
     }
 
     private void initActionBar() {
@@ -69,15 +110,49 @@ public class UserIdeaAddActivity extends BaseActivity {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                onBackPressed();
             }
         });
-        findViewById(R.id.text_release_btn).setOnClickListener(new View.OnClickListener() {
+        mReleaseBtn = (TextView) findViewById(R.id.text_release_btn);
+        mReleaseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "1111");
+                AlertDialog alert = new AlertDialog(UserIdeaAddActivity.this, getResources().getString(R.string.release_submit)) {
+                    @Override
+                    public void onSubmit() {
+//                        finish();
+                    }
+                };
+                alert.show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (ismHasContent()) {
+            AlertDialog alert = new AlertDialog(UserIdeaAddActivity.this, getResources().getString(R.string.quit_alert)) {
+                @Override
+                public void onSubmit() {
+                    finish();
+                }
+            };
+            alert.show();
+        } else {
+            finish();
+        }
+    }
+
+    public boolean ismHasContent() {
+        if (mImageAdapter.mList.size() == 0 && mAddIdeaTitle.getText().toString().isEmpty() && mAddIdea.getText().toString().isEmpty()) {
+            mReleaseBtn.setTextColor(getResources().getColor(R.color.black_9));
+            mReleaseBtn.setEnabled(false);
+            return false;
+        } else {
+            mReleaseBtn.setTextColor(getResources().getColor(R.color.black_f));
+            mReleaseBtn.setEnabled(true);
+            return true;
+        }
     }
 
     public class ImageAdapter extends BaseAdapter {
