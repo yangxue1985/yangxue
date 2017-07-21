@@ -19,4 +19,5 @@
     <string name="add_text_done">Done</string>
     <string name="add_idea_title">title</string>
     <string name="add_idea_text">Something to write...</string>
+    <string name="share_to">Share this to</string>
 </resources>

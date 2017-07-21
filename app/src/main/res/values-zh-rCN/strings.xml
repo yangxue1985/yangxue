@@ -17,4 +17,5 @@
     <string name="resource_title">这里输入想写的标题，暂时没有数字限制，想写多少就写多少，但是字数太多了会放不下的。。。</string>
     <string name="resource_played">播放次数</string>
     <string name="resource_name">作者</string>
+    <string name="share_to">分享到</string>
 </resources>

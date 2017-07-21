@@ -1,6 +1,8 @@
 package com.innkp.innovate;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -141,6 +143,10 @@ public class MainPageFragment extends Fragment {
                 holder.share.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        Intent intent = new Intent(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_TEXT, "www.baidu.com");
+                        startActivity(Intent.createChooser(intent, getResources().getString(R.string.share_to)));
                     }
                 });
 
